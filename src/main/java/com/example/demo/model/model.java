@@ -1,71 +1,111 @@
 package com.example.demo.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table(name = "MUSIC")
+@Table(name = "Infomation")
 public class model 
 {
 	@Id
-	private int artistid;
-	private String artistname;
-	private String song;
-	private String releasedate;
-	private String language;
-	private float IMDbrating;
-	public float getIMDbrating() {
-		return IMDbrating;
-	}
-	public void setIMDbrating(float iMDbrating) {
-		IMDbrating = iMDbrating;
-	}
-	public String getLanguage() {
-		return language;
-	}
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-	public int getArtistid() {
-		return artistid;
-	}
-	public void setArtistid(int artistid) {
-		this.artistid = artistid;
-	}
-	public String getArtistname() {
-		return artistname;
-	}
-	public void setArtistname(String artistname) {
-		this.artistname = artistname;
-	}
-	public String getSong() {
-		return song;
-	}
-	public void setSong(String song) {
-		this.song = song;
-	}
-	public String getReleasedate() {
-		return releasedate;
-	}
-	public void setReleasedate(String releasedate) {
-		this.releasedate = releasedate;
-	}
+	private int courseid;
+    private String coursename;
+    private String studentname;
+    private String studentemail;
+    private String enrollmentdate;
+    private String duration;
+    
+    
 	
-	public model(int artistid, String artistname, String song, String releasedate, String language, float iMDbrating) {
-		super();
-		this.artistid = artistid;
-		this.artistname = artistname;
-		this.song = song;
-		this.releasedate = releasedate;
-		this.language = language;
-		this.IMDbrating = iMDbrating;
+	public int getCourseid() {
+		return courseid;
 	}
+
+
+
+	public void setCourseid(int courseid) {
+		this.courseid = courseid;
+	}
+
+
+
+	public String getCoursename() {
+		return coursename;
+	}
+
+
+
+	public void setCoursename(String coursename) {
+		this.coursename = coursename;
+	}
+
+
+
+	public String getStudentname() {
+		return studentname;
+	}
+
+
+
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+	}
+
+
+
+	public String getStudentemail() {
+		return studentemail;
+	}
+
+
+
+	public void setStudentemail(String studentemail) {
+		this.studentemail = studentemail;
+	}
+
+
+
+	public String getEnrollmentdate() {
+		return enrollmentdate;
+	}
+
+
+
+	public void setEnrollmentdate(String enrollmentdate) {
+		this.enrollmentdate = enrollmentdate;
+	}
+
+
+
+	public String getDuration() {
+		return duration;
+	}
+
+
+
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+
+
+
+	public model(int courseid, String coursename, String studentname, String studentemail, String enrollmentdate,
+			String duration) {
+		super();
+		this.courseid = courseid;
+		this.coursename = coursename;
+		this.studentname = studentname;
+		this.studentemail = studentemail;
+		this.enrollmentdate = enrollmentdate;
+		this.duration = duration;
+	}
+
+
+
 	public model()
 	{
 		
 	}
-	public String toString()
-	{
-		return "artist_id="+artistid+"artist_name="+artistname+"song="+song+"release_date="+releasedate+"language="+language+"IMBdrating="+IMDbrating;
-	}
+	
+	
 }

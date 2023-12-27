@@ -35,22 +35,12 @@ public class controller {
 	{
 		return stuService.UpdateDetails(st1);
 	}
-	@DeleteMapping("/delete/{artistid}")
-	public String deleteInfo(@PathVariable("artistid")int artistid)
+	@DeleteMapping("/delete/{courseid}")
+	public String deleteInfo(@PathVariable("courseid")int artistid)
 	{
 		stuService.deleteDetails(artistid);
 		return "Details Deleted";
 	}
 	
-	//sorting
-	@GetMapping("/product/{field}")
-	public List<model> getWithSort(@PathVariable String field) {
-		return stuService.getSorted(field);
-	}
 
-	// pagination
-	@GetMapping("/product/{offset}/{pageSize}")
-	public List<model> productsWithPagination(@PathVariable int offset, @PathVariable int pageSize) {
-		return stuService.getWithPagination(offset, pageSize);
-	}
 }

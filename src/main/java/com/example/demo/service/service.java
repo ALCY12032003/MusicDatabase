@@ -32,12 +32,5 @@ public class service {
 	{
 		stRepo.deleteById(id);
 	}
-	public List<model> getSorted(String field) {
-		return stRepo.findAll(Sort.by(Sort.Direction.ASC,field));
-	}
 	
-	public List<model> getWithPagination(@PathVariable int offset, @PathVariable int pageSize) {
-		Page<model> page =stRepo.findAll(PageRequest.of(offset, pageSize));
-		return page.getContent();
-	}
 }
